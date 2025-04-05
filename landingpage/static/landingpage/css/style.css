@@ -418,7 +418,7 @@ h2 {
 @supports ((text-stroke: 1px #ff264a) or (-webkit-text-stroke: 1px #ff264a)) {
   .hero-heading span {
     /* color: transparent; */
-    color: red !important;
+    color: #ff264a !important;
     -webkit-text-stroke: 1px #ff264a;
     /* text-stroke: 1px #ff264a; */
     text-shadow: none;
@@ -638,7 +638,7 @@ h1.section-header {
 }
 
 h1.section-header span {
-  color: red !important;
+  color: #ff264a !important;
   -webkit-text-stroke: 1px #ff264a;
   /* text-stroke: 1px #ff264a; */
 }
@@ -1466,7 +1466,9 @@ input:focus.subscribe-email:-moz-placeholder {
 .overlay-dark-75::before {
   background: rgba(0, 0, 0, 0.75);
 }
-
+.overlay-magenta-75::before {
+  background: rgba(245, 3, 136, 0.75);
+}
 .cover-all::before {
   position: absolute;
   width: 100%;

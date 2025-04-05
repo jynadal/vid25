@@ -301,6 +301,34 @@ $(function () {
       $('.menu-container-right, .menu-container-left').addClass('open');
     }
   });
+
+  // menu content AVEC CORRECTION
+  //   document.getElementById('menu-toggle').addEventListener('click', function () {
+  //     const menu = document.getElementById('menu');
+  //     menu.classList.toggle('hidden');
+  //   });
+
+  //   $('.open-menu-content, .main-menu li').on('click', function () {
+  //     const isOpen = $('.menu-container-right, .menu-container-left').hasClass(
+  //       console.log('Menu ouvert ?', isOpen)
+  //     );
+
+  //     if (isOpen) {
+  //       // Fermer le menu
+  //       $('.menu-container-right, .menu-container-left')
+  //         .removeClass('open')
+  //         .addClass('close');
+  //       $('.menu-overlay, .main-menu, .full-screen-wrapper').fadeOut(300);
+  //     } else {
+  //       // Ouvrir le menu
+  //       $('.menu-container-right, .menu-container-left')
+  //         .removeClass('close')
+  //         .addClass('open');
+  //       $('.menu-overlay').delay(300).fadeIn(600);
+  //       $('.main-menu, .full-screen-wrapper').delay(250).fadeIn(500);
+  //     }
+  //   });
+
   // menu active state
   $('.menu-item').on('click', function () {
     $('.menu-item').removeClass('active');
