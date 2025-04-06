@@ -142,8 +142,12 @@
         <!-- left 1 start -->
         <div class="ms-section" id="left-1">
           <!-- logo start -->
+         
           <a class="logo left-position">
-            <div class="logo-img">VIIIIIID3000000</div>
+            <div> <h1 class="hero-heading">
+                {% comment %} <i class="hero-heading-xs"></i><br /> {% endcomment %}
+                <span>Vid30</span>
+              </h1></div>
           </a>
           {% comment %}
           <a class="logo right-position"> <div class="logo-img">Vid30</div> </a>
@@ -775,77 +779,94 @@
           <div
             class="overlay overlay-all overlay-dark-75 cover-all"
             id="contact-bg-right"
-          ></div>
+          >
+          </div>
           <!-- bg IMG end -->
           <!-- content wrapper start -->
-          <div class="content-wrapper">
+        
+           <div class="content-wrapper">
+           <h2>EMail:  johnyves79@gmail.com</h2>
+            {% comment %} <h2>Mail:  johnyves79@gmail.com</h2> {% endcomment %}
+
+          {% comment %}
             <!-- container start -->
-            <div class="sections">
-              <!-- contact form start -->
-              <div id="contact-form">
-                <form id="#contact_form" method="post" name="send">
-                  {% csrf_token %}
-                  <!-- col start -->
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                    <input
-                      class="requiredField name"
-                      id="name"
-                      name="name"
-                      placeholder="Name"
-                      type="text"
-                    />
-                  </div>
-                  <!-- col end -->
-                  <!-- col start -->
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                    <input
-                      class="requiredField email"
-                      id="email"
-                      name="email"
-                      placeholder="Email"
-                      type="text"
-                    />
-                  </div>
-                  <!-- col end -->
-                  <!-- col start -->
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                    <input
-                      class="requiredField subject"
-                      id="subject"
-                      name="subject"
-                      placeholder="Subject"
-                      type="text"
-                    />
-                  </div>
-                  <!-- col end -->
-                  <!-- col start -->
-                  <div class="make-space">
-                    <textarea
-                      class="requiredField message"
-                      id="message"
-                      name="message"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-                  <!-- col end -->
-                  <div>
-                    <!-- button start -->
-                    <div class="contact-form-submit-wrapper">
-                      <button
-                        class="the-button the-button-contact the-button-submit"
-                        id="submit"
-                        type="submit"
-                      >
-                        <span>Submit Contact</span>
-                      </button>
+            {% if message_name %}
+                <center>
+                    <h2>Thanks {{ message_name}}! </h2>
+                    <p>We receives your email and will respond shorly </p>
+                </center>
+                </br><br/><br/>
+            {% else %}
+                <div class="sections">
+                <!-- contact form start -->
+                <div id="contact-form">
+                    <form id"#contact_form" 
+                   action ='contact'  
+                     method="pot" name="send">
+                    {% csrf_token %}
+                    <!-- col start -->
+                    <div class="col-m-12 col-md-6 col-lg-6">
+                        <input
+                        class="requiredField name"
+                        id="name"
+                        name="message-name"
+                        placeholder="Name"
+                        type="text"
+                        />
                     </div>
-                    <!-- button end -->
-                  </div>
-                </form>
-              </div>
-              <!-- contact form end -->
-            </div>
+                    <!-- col end -->
+                    <!-- col start -->
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <input
+                        class="requiredField email"
+                        id="email"
+                        name="message-email"
+                        placeholder="Email"
+                        type="text"
+                        />
+                    </div>
+                    <!-- col end -->
+                    <!-- col start -->
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <input
+                        class="requiredField subject"
+                        id="subject"
+                        name="message-subject"
+                        placeholder="Subject"
+                        type="text"
+                        />
+                    </div>
+                    <!-- col end -->
+                    <!-- col start -->
+                    <div class="make-space">
+                        <textarea
+                        class="requiredField message"
+                        id="message"
+                        name="message"
+                        placeholder="Message"
+                        ></textarea>
+                    </div>
+                    <!-- col end -->
+                    <div>
+                        <!-- button start -->
+                        <div class="contact-form-submit-wrapper">
+                        <button
+                            class="the-button the-button-contact the-button-submit"
+                            id="submit"
+                            type="submit"
+                        >
+                            <span>Submit Contact</span>
+                        </button>
+                        </div>
+                        <!-- button end -->
+                    </div>
+                    </form>
+                </div>
+                <!-- contact form end -->
+                </div>
+            {% endif %}
             <!-- container end -->
+          {% endcomment %}
           </div>
           <!-- content wrapper end -->
         </div>

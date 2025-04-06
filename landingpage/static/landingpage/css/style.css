@@ -2378,6 +2378,8 @@ a.link-nav:hover .multiscroll-tooltip {
 
 /* 18. logo */
 .logo {
+color: blue;
+text-transform: lowercase !important;
   position: fixed;
   display: inline-block;
   top: 40px;
