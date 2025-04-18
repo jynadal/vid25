@@ -32,13 +32,13 @@ def contact(request):
         message=request.POST.get['message']
 
         # send an email
-        send_mail(
-            message_name, # subject
-            message_email, # from Email
-            message_subject, # subject
-            message, # message
-            ['johnyves79@gmail.com', 'nadaljeanyves79@gmail.com'], # to Email
-            )
+        # send_mail(
+        #     message_name, # subject
+        #     message_email, # from Email
+        #     message_subject, # subject
+        #     message, # message
+        #     ['johnyves79@gmail.com', 'nadaljeanyves79@gmail.com'], # to Email
+        #     )
 
         # contact.name=name
         # contact.email=email
